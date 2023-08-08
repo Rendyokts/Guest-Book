@@ -12,38 +12,50 @@
         <div class="row mt-2">
             <!-- col-lg-7 Start-->
             <div class="col-lg-7 mb-3">
-                <div class="card shadow bg-gradient-light">
+                <div class="card-background rounded bg-white shadow">
                     <!-- Card Body Start -->
                     <div class="card-body">
 
+                        <!-- Form untuk admin menginput data tamu harian -->
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4"><b>Visitors ID</b></h1>
                             </div>
                             <form class="user" method="POST" action="">
 
+                            <!-- Input nama tamu -->
                                 <div class="form-group">
                                     <input type="text" name="name" id="" class="form-control-user form-control"
                                     placeholder="Visitor Name" required>
                                 </div>
 
+                            <!-- input tujuan atau keperluan tamu -->
                                 <div class="form-group">
                                     <input type="text" name="purpose" id="" class="form-control-user form-control"
                                     placeholder="Visitor Purpose" required>
                                 </div>
 
+                            <!-- input tamu ingin bertemu dengan siapa -->
+                                <div class="form-group">
+                                    <input type="text" name="meet" id="" class="form-control-user form-control"
+                                    placeholder="Who To Meet" required>
+                                </div>
+
+                            <!-- input alamat tamu -->
                                 <div class="form-group">
                                     <input type="text" name="address" id="" class="form-control-user form-control"
                                     placeholder="Visitor Address" required>
                                 </div>
 
+                            <!-- input nomer telpon tamu -->
                                 <div class="form-group">
                                     <input type="number" name="phone" id="" class="form-control-user form-control"
                                     placeholder="Visitor Phone Number" required>
                                 </div>
 
-                                <button type="submit" name="btnsave" class="btn btn-primary btn-user btn-block">
-                                    Save
-                                </button>
+                            <!-- tombol simpan data tamu yang akan tersimpan pada database dan ditampilkan pada tabel dibawah -->
+                                    <button type="submit" name="btnsave" class="btn btn-primary btn-user btn-block">
+                                        Save
+                                    </button>
                             </form>
                             <hr>
                             <div class="text-center">
@@ -129,6 +141,7 @@
         </div>
         <!-- End Row -->
 
+                <!-- Tabel untuk menampilkan data tamu harian yang telah diinput oleh admin pada page index.php -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Visitor Data Today [<?= date('d-m-Y')?>]</h6>
@@ -146,15 +159,18 @@
                             
 
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0"> <!-- Tabel data tamu -->
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0"> 
+                                    <!-- Tabel data tamu -->
                                     <thead>
                                         <tr>
                                             <th>No.</th>
                                             <th>Date</th>
                                             <th>Name</th>
                                             <th>Purposes</th>
+                                            <th>To Whom</th>
                                             <th>Address</th>
                                             <th>Phone Number</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -163,24 +179,38 @@
                                             <th>Date</th>
                                             <th>Name</th>
                                             <th>Purposes</th>
+                                            <th>To Whom</th>
                                             <th>Address</th>
                                             <th>Phone Number</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <?php
-                                            $date = date('Y-m-d'); //Membuat variable tanggal untuk ditampilkan pada tabel data pengunjung
-                                            $show = mysqli_query($connection, "SELECT * FROM tbtamu where date like '%$date%' order by id desc"); //Memanggil data tamu menggunakan query yang ada pada database phpMyAdmin
+                                            //Membuat variable tanggal untuk ditampilkan pada tabel data pengunjung
+                                            $date = date('Y-m-d');
+                                            //Memanggil data tamu menggunakan query yang ada pada database phpMyAdmin
+                                            $show = mysqli_query($connection, "SELECT * FROM tbtamu where date like '%$date%' order by id desc");
+                                            //Variable $no adalah untuk Nomer urut dalam tabel dan diberikan increment
                                             $no = 1;
-                                            while ($data = mysqli_fetch_array($show)){ //Tampilkan data dalam bentuk array lalu ditampung dalam variable $data
+                                            //Tampilkan data dalam bentuk array lalu ditampung dalam variable $data
+                                            while ($data = mysqli_fetch_array($show)){
                                         ?>
                                             <tr>
                                                 <td><?= $no++ ?></td>
                                                 <td><?= $data['date'] ?></td>
                                                 <td><?= $data['name'] ?></td>
                                                 <td><?= $data['purpose'] ?></td>
+                                                <td><?= $data['meet'] ?></td>
                                                 <td><?= $data['address'] ?></td>
                                                 <td><?= $data['phone'] ?></td>
+                                                <td>
+                                                    <!-- Button delete untuk menghapus data pada tabel -->
+                                                    <button type="button" name="delete" class="btn btn-danger btn-sm" onclick="deleteVisitor(<?= $data['id'] ?>)">
+                                                        <i class="fa fa-trash"></i>
+                                                    Delete
+                                                    </button>
+                                                </td>
                                             </tr>
 
                                         <?php

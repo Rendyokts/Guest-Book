@@ -1,3 +1,5 @@
+<!-- File output berbentuk Excel -->
+
 <?php
     include "connection.php";
 
@@ -18,6 +20,7 @@
             <th>Date</th>
             <th>Name</th>
             <th>Purposes</th>
+            <th>To Whom</th>
             <th>Address</th>
             <th>Phone Number</th>
         </tr>
@@ -37,6 +40,7 @@
                 <td><?= $data['date'] ?></td>
                 <td><?= $data['name'] ?></td>
                 <td><?= $data['purpose'] ?></td>
+                <td><?= $data['meet'] ?></td>
                 <td><?= $data['address'] ?></td>
                 <td><?= $data['phone'] ?></td>
             </tr>

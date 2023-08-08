@@ -1,30 +1,25 @@
 <?php
 
-function validateUser($username, $password) {
-    // Baca data dari file users.json
-    $data = file_get_contents('users.json');
-    $users = json_decode($data, true);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-    // Cari pengguna berdasarkan username
-    foreach ($users['users'] as $user) {
-        if ($user['username'] === $username && $user['password'] === $password) {
-            return true;
+    $users = json_decode(file_get_contents("users.json"), true);
+
+    $loggedIn = false;
+    foreach ($users as $user) {
+        if ($user["username"] == $username && $user["password"] == $password) {
+            $loggedIn = true;
+            break;
         }
     }
 
-    return false;
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $usernameInput = $_POST['username'];
-    $passwordInput = $_POST['password'];
-
-    if (validateUser($usernameInput, $passwordInput)) {
-        echo "Login berhasil!";
-        header('Location: index.php');
+    if ($loggedIn) {
+        echo "<script>alert('Login Success, Thanks!')
+                    document.location='index.php'</script>";
     } else {
-        echo "Username atau password salah.";
-        header ('Location: login.php');
+        echo "<script>alert('Login Failed, Please try again!')
+                    document.location='login.php'</script>";
     }
 }
 ?>

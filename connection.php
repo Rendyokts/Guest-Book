@@ -1,3 +1,5 @@
+<!-- file untuk menyambungkan database dengan file program -->
+
 <?php
     $server = "localhost";
     $user = "root";

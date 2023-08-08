@@ -13,6 +13,8 @@
 
     <link rel="icon" href="assets/img/digitalent-mobile.png" type="image/x-icon">
 
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <!-- Custom fonts for this template-->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -24,12 +26,12 @@
 
 </head>
 
-<body class="bg-gradient-secondary">
+<body class="body-background">
 
     <div class="container">
 
         <!-- Outer Row -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-5">
 
             <div class="col-xl-10 col-lg-12 col-md-9">
 
@@ -37,25 +39,24 @@
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-lg-block bg-secondary shadow-lg p-5 text-center">
+                            <div class="card-background col-lg-6 d-lg-block shadow-lg p-5 text-center">
                                 <img src="assets/img/digitalent-mobile.png" width="300" alt="">
-                                <h3 class="text-white">Digitalent <br> Guest Book</h3>
-                                <h6 class="text-white">Rendi Oktavian</h6>
+                                <h3 class="text-primary">Digitalent <br> Guest Book</h3>
+                                <h6 class="text-primary">Rendi Oktavian</h6>
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form class="user" action="index.php" method="POST">
+                                    <form class="user" action="loginCheck.php" method="POST">
                                         <div class="form-group">
                                             <input type="text" name="username" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Username">
+                                                id="username" placeholder="Enter Username" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                                id="password" placeholder="Password" required>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -68,7 +69,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Rendi Oktavian | <?= date('Y') ?></a>
+                                        <a class="small" href="#">Rendi Oktavian | <?= date('Y') ?></a>
                                     </div>
                                 </div>
                             </div>

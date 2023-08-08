@@ -1,4 +1,6 @@
-<?php include "header.php" ?> 
+<!-- Menambahkan page header pada page Data Summary -->
+<?php include "header.php"; ?> 
+
 
 <!-- row start -->
 <div class="row">
@@ -30,13 +32,15 @@
                         </div>
 
                         <div class="row">
+                            <!-- Button Show data untuk menampilkan sejumlah data yang telah diatur oleh user berdasarkan hari -->
                             <div class="col-md-4"></div>
                                 <div class="cold-md-2">
                                     <button class="btn btn-primary form-control" 
                                     name="btnShow"><i class="fa fa-search"></i> Show Data
                                     </button>
                                 </div>
-                                <div class="col-md-2">
+                        <!-- Button Return untuk kembali ke bagian admin page atau index page -->
+                                <div class="col-md-2 mb-4">
                                     <a href="index.php" class="btn btn-danger form-control">
                                         <i class="fa fa-backward"></i> Return
                                     </a>
@@ -45,17 +49,20 @@
                     </form>
 
                     <?php
+                    // Program mengecek apabila user meng-klik Show Button
                         if(isset($_POST['btnShow'])) :
 
                     ?>
                     <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0"> <!-- Tabel data tamu -->
+                                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0"> 
+                                    <!-- Tabel data tamu -->
                                     <thead>
                                         <tr>
                                             <th>No.</th>
                                             <th>Date</th>
                                             <th>Name</th>
                                             <th>Purposes</th>
+                                            <th>To Whom</th>
                                             <th>Address</th>
                                             <th>Phone Number</th>
                                         </tr>
@@ -66,6 +73,7 @@
                                             <th>Date</th>
                                             <th>Name</th>
                                             <th>Purposes</th>
+                                            <th>To Whom</th>
                                             <th>Address</th>
                                             <th>Phone Number</th>
                                         </tr>
@@ -77,13 +85,16 @@
                                             $endDate = $_POST['endDate'];
                                             $show = mysqli_query($connection, "SELECT * FROM tbtamu where date BETWEEN '$startDate' and '$endDate' order by id desc"); //Memanggil data tamu menggunakan query yang ada pada database phpMyAdmin
                                             $no = 1;
-                                            while ($data = mysqli_fetch_array($show)){ //Tampilkan data dalam bentuk array lalu ditampung dalam variable $data
+                                            while ($data = mysqli_fetch_array($show)){ 
+                                                //Tampilkan data dalam bentuk array lalu ditampung dalam variable $data
                                         ?>
                                             <tr>
+                                                <!-- Menampilkan data tamu dengan mengambil data dari array $data -->
                                                 <td><?= $no++ ?></td>
                                                 <td><?= $data['date'] ?></td>
                                                 <td><?= $data['name'] ?></td>
                                                 <td><?= $data['purpose'] ?></td>
+                                                <td><?= $data['meet'] ?></td>
                                                 <td><?= $data['address'] ?></td>
                                                 <td><?= $data['phone'] ?></td>
                                             </tr>
@@ -95,11 +106,13 @@
                                 </table>
 
                                 <center>
+                                    <!-- Menentukan hari awal dan hari akhir untuk menampilkan sejumlah data tamu -->
                                     <form action="exportExcel.php" method="POST">
                                         <div class="col-md-4">
                                             <input type="hidden" name="startDate1" value="<?= @$_POST['startDate']?>">
                                             <input type="hidden" name="endDate1" value="<?= @$_POST['endDate']?>">
-    
+
+                                            <!-- Button untuk mengarahkan ke Output excel berupa hasil dari data yang sudah dipilih berdasarkan hari -->
                                             <button class="btn btn-success form-control" name="btnExport">
                                                 <i class="fa fa-download"></i> Export Data Excel
                                             </button>
@@ -119,4 +132,5 @@
 </div>
 <!-- row end -->
 
-<?php include "footer.php" ?>
+<!-- Menambahkan page footer pada page summary -->
+<?php include "footer.php"; ?>
