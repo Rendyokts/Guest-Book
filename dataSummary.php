@@ -34,7 +34,7 @@
                         <div class="row">
                             <!-- Button Show data untuk menampilkan sejumlah data yang telah diatur oleh user berdasarkan hari -->
                             <div class="col-md-4"></div>
-                                <div class="cold-md-2">
+                                <div class="col-md-2 mb-2">
                                     <button class="btn btn-primary form-control" 
                                     name="btnShow"><i class="fa fa-search"></i> Show Data
                                     </button>

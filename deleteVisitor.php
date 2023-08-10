@@ -7,7 +7,6 @@
         $visitorId = $_POST["id"];
 
         // Perform the database operation to delete the data
-        // Replace "your_db_hostname", "your_db_username", "your_db_password", and "your_db_name" with your actual database credentials
         $connection = mysqli_connect("localhost", "root", "", "dbbukutamu");
         if (!$connection) {
             die("Connection failed: " . mysqli_connect_error());

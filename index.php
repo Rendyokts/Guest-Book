@@ -152,7 +152,7 @@
                                 Data Summary
                             </a>
                             
-                            <a href="login.php" class="btn btn-danger mb-3">
+                            <a href="login.php" class="btn btn-danger mb-3 logoutbox">
                                 <i class="fa fa-sign-out-alt"></i>
                                 Logout
                             </a>
