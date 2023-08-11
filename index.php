@@ -59,7 +59,7 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="#">Rendi Oktavian <br> Digitalent | <?= date('Y')?></a>
+                                <a class="small">Rendi Oktavian <br> Digitalent | <?= date('Y')?></a>
                             </div>
 
                     </div>
