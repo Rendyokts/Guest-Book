@@ -5,3 +5,15 @@
 .card-background{
     background-color: #F4F2DE !important;
 }
+
+.sidebar{
+    background-color: #4682A9 !important;
+}
+
+.sidebar-devider{
+    background-color: blue;
+}
+
+.logout :hover{
+    color: red !important;
+}

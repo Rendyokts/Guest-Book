@@ -29,34 +29,70 @@
 
 </head>
 
-<body class="body-background">
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="assets/img/digitalent-mobile.png" width="30"> Digitalent</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="login.php" class="btn btn-danger mb-3">
-                        <i class="fa fa-sign-out-alt"></i>
-                        Logout
-                    </a>
-                </li>
-            </ul>
+<body class="body-background" id="page-top">
+        <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-3 mb-2 " href="index.php">
+                <div class="sidebar-brand-icon">
+                    <img src="assets/img/digitalent-mobile.png" width="50">
+                </div>
+                <div class="sidebar-brand-text mx-1">Guest Book</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <hr class="sidebar-divider my-0">
+
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link " href="index.php">
+                <i class="fa fa-id-card" aria-hidden="true"></i>
+                    <span class="">Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Databases -->
+            <li class="nav-item">
+                <a class="nav-link " href="allData.php">
+                <i class="fa fa-database"></i>
+                    <span class="">Guest Database</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Data Summary-->
+            <li class="nav-item">
+                <a class="nav-link" href="dataSummary.php">
+                    <i class="fas fa-table"></i>
+                    <span>Data Summary</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Logout -->
+            <li class="nav-item logout">
+                <a class="nav-link" href="login.php">
+                    <i class="fa fa-sign-out-alt"></i>
+                    <span>Logout</span></a>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-        </div>
-    </nav> -->
-<!-- Container Start -->
-    <div class="container">
-        <?php include "connection.php"; ?>
+
+        </ul>
+<!-- End of Sidebar -->
+        <div class="container">
+            <?php include "connection.php"; ?>

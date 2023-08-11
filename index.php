@@ -1,10 +1,11 @@
 <!-- Calling Header File -->
 <?php include "header.php"; ?>
 <?php include "admin.php"; ?>
+
         <!-- Head Start -->
-        <div class="head text-center">
-            <img src="assets/img/digitalent-mobile.png" width="100">
-            <h2 class="text-white">Digitalent <br> Guest Book</h2>
+        <div class="head text-center mt-4 mb-4">
+            <!-- <img src="assets/img/digitalent-mobile.png" width="100"> -->
+            <h1 class="text-white">Digitalent - Guest Book</h1>
         </div>
         <!-- Head End -->
 
@@ -147,16 +148,6 @@
                             <h6 class="m-0 font-weight-bold text-primary">Visitor Data Today [<?= date('d-m-Y')?>]</h6>
                         </div>
                         <div class="card-body">
-                            <a href="dataSummary.php" class="btn btn-success mb-3">
-                                <i class="fa fa-table"></i>
-                                Data Summary
-                            </a>
-                            
-                            <a href="login.php" class="btn btn-danger mb-3 logoutbox">
-                                <i class="fa fa-sign-out-alt"></i>
-                                Logout
-                            </a>
-                            
 
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0"> 
