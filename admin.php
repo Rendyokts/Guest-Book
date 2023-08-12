@@ -12,12 +12,12 @@
         //Mempersiapkan query save data
         $save = mysqli_query($connection, "INSERT INTO tbtamu VALUES ('', '$date', '$name', '$address', '$purpose', '$meet','$phone')");
 
-        if($save){ //Mengecek jika save data sukses
-            echo "<script>alert('Save Data Success, Thanks!')
-                    document.location='?'</script>";
-        } else{
-            echo "<script>alert('Save Data Failed , Try Again!')
-                    document.location='?'</script>";
-        }
+        // if($save){ //Mengecek jika save data sukses
+        //     echo "<script>alert('Save Data Success, Thanks!')
+        //             document.location='?'</script>";
+        // } else{
+        //     echo "<script>alert('Save Data Failed , Try Again!')
+        //             document.location='?'</script>";
+        // }
     }
 ?>

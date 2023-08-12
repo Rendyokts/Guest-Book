@@ -78,12 +78,25 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
+                <!-- Nav Item - Logout -->
+                <li class="nav-item admin">
+                    <a class="nav-link" name="admin" href="adminPage.php">
+                        <i class="fa fa-user"></i>
+                        <span>Admin</span></a>
+                </li>
+
+            <hr class="sidebar-divider my-0">
+
             <!-- Nav Item - Logout -->
-            <li class="nav-item logout">
-                <a class="nav-link" href="login.php">
-                    <i class="fa fa-sign-out-alt"></i>
-                    <span>Logout</span></a>
-            </li>
+                <li class="nav-item logout">
+                    <a class="nav-link" name="logout" href="login.php">
+                        <i class="fa fa-sign-out-alt"></i>
+                        <span>Logout</span></a>
+                </li>
+
+                <hr class="sidebar-divider my-0">
+
+            
 
             <hr class="sidebar-divider d-none d-md-block">
 
