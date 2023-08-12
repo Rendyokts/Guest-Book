@@ -22,11 +22,11 @@
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="new_password" class="form-control form-control-user"
-                                                id="password" placeholder="Password" required>
+                                                id="new_password" placeholder="Password" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="confirm_password" class="form-control form-control-user"
-                                                id="password" placeholder="Confirm Password" required>
+                                                id="confirm_password" placeholder="Confirm Password" required>
                                         </div>
                                         <input class="btn btn-primary btn-user btn-block" value="Save Password" type="submit" name="btnchange">
                                     </form>
