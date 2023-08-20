@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnchange'])) {
     // Menampilkan pop-up JavaScript setelah perubahan kata sandi berhasil
     echo '<script>
             alert("Password berhasil diubah!");
-            window.location.href = "adminPage.php"; // Ganti dengan halaman yang sesuai
+            window.location.href = "adminPage.php"; 
         </script>';
     exit();
 }

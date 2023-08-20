@@ -50,7 +50,8 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-5">Welcome Back!</h1>
+                                        <i class="fa fa-user-circle"></i>
+                                        <h1 class="h4 text-gray-900 mb-5">Welcome !<br> Sign in to your account</h1>
                                     </div>
                                     <form class="user" action="loginCheck.php" method="POST">
                                         <div class="form-group">
@@ -59,16 +60,11 @@
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                                id="password" placeholder="Password" required>
+                                            id="password" placeholder="Password" required>
+                                            <input class="my-3 ml-2" type="checkbox" id="show-password"> Show Password
                                         </div>
-                                        <!-- <div class="form-group">
-                                            <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
-                                                <label class="custom-control-label" for="customCheck">Remember
-                                                    Me</label>
-                                            </div>
-                                        </div> -->
-                                        <input class="btn btn-primary btn-user btn-block" value="Login" type="submit" name="btnlogin">
+                                
+                                        <input class="btn btn-primary btn-user btn-block mt-3" value="Login" type="submit" name="btnlogin">
                                     </form>
                                     <hr>
                                     <div class="text-center">
@@ -86,6 +82,7 @@
 
     </div>
 
+
     <!-- Bootstrap core JavaScript-->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -96,5 +93,7 @@
     <!-- Custom scripts for all pages-->
     <script src="assets/js/sb-admin-2.min.js"></script>
 
+    <!-- Script untuk melihat password -->
+    <script src="assets/js/showPasswordLogin.js"></script>
 
     <?php include 'footer.php'; ?>

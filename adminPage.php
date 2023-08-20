@@ -13,6 +13,7 @@
                             <div class="col-md-12">
                                 <div class="p-5">
                                     <div class="text-center">
+                                        <i class="fa fa-user-circle"></i>
                                         <h1 class="h4 text-gray-900 mb-4">Change Password</h1>
                                     </div>
                                     <form class="user" action="changePwd.php" method="POST">
@@ -23,11 +24,12 @@
                                         <div class="form-group">
                                             <input type="password" name="new_password" class="form-control form-control-user"
                                                 id="new_password" placeholder="Password" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" name="confirm_password" class="form-control form-control-user"
+                                            <input type="password" name="confirm_password" class="form-control form-control-user mt-3"
                                                 id="confirm_password" placeholder="Confirm Password" required>
+                                            <input type="checkbox" id="show-password" class="my-3 ml-2"> Show Password
                                         </div>
+                                        <!-- <div class="form-group">
+                                        </div> -->
                                         <input class="btn btn-primary btn-user btn-block" value="Save Password" type="submit" name="btnchange">
                                     </form>
                                     <hr>
@@ -55,6 +57,9 @@
 
     <!-- Custom scripts for all pages-->
     <script src="assets/js/sb-admin-2.min.js"></script>
+    
+    <!-- Script untuk melihat password -->
+    <script src="assets/js/showPasswordAdmin.js"></script>
 
 
     <?php include 'footer.php'; ?>
