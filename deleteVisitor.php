@@ -1,5 +1,3 @@
-<!-- file untuk menghapus data tamu -->
-
 <?php
     // Check if the HTTP request method is POST
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -24,3 +22,4 @@
         mysqli_close($connection);
     }
 ?>
+

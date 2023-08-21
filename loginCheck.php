@@ -15,8 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if ($loggedIn) {
-        echo "<script>alert('Login Success, Thanks!')
-                    document.location='index.php'</script>";
+        echo "<script>document.location='index.php'</script>";
     } else {
         echo "<script>alert('Login Failed, Please try again!')
                     document.location='login.php'</script>";

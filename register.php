@@ -45,7 +45,8 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="card-background col-lg-6 d-lg-block shadow-lg p-5 text-center">
-                                <img src="assets/img/buku4.png" width="300" alt="" class="my-5">
+                            <img src="assets/img/buku4.png" width="300" alt="" class="my-5">
+                                <!-- <i class="fa fa-address-book" aria-hidden="true"></i> -->
                                 <h3 class="text-primary font-weight-bold mt-5">Guest Book</h3>
                                 <h6 class="text-primary">Daily Guest Data Recording</h6>
                             </div>
@@ -53,27 +54,29 @@
                                 <div class="p-5">
                                     <div class="text-center">
                                         <i class="fa fa-user-circle"></i>
-                                        <h1 class="h4 text-gray-900 mb-5">Welcome !<br> Sign in to your account !</h1>
+                                        <h1 class="h4 text-gray-900 mb-5">Hallo !<br> Register to get your account !</h1>
                                     </div>
-                                    <form class="user" action="loginCheck.php" method="POST">
+                                    <form class="user" action="registerCheck.php" method="POST">
                                         <div class="form-group">
                                             <input type="text" name="username" class="form-control form-control-user"
                                                 id="username" placeholder="Enter Username" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" name="password" class="form-control form-control-user"
-                                            id="password" placeholder="Password" required>
+                                                id="password" placeholder="Password" required>
+                                            <input type="password" name="confirm_password" class="form-control form-control-user mt-3"
+                                                id="confirm_password" placeholder="Confirm Password" required>
                                             <input class="my-3 ml-2" type="checkbox" id="show-password">
                                             <label for="show-password" class="fw-light">Show Password</label>
                                         </div>
                                 
-                                        <input class="btn btn-primary btn-user btn-block mt-3" value="Login" type="submit" name="btnlogin" id="loginButton">
+                                        <input class="btn btn-primary btn-user btn-block mt-3" value="Register" type="submit" name="btnRegister" id="registerButton">
                                     </form>
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="#">Rendi Oktavian | <?= date('Y') ?></a>
                                         <br>
-                                        <a class="small" href="register.php">Don't have an account? Register here !</a>
+                                        <a class="small" href="login.php">Already have an account? Login here!</a>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +102,7 @@
     <script src="assets/js/sb-admin-2.min.js"></script>
 
     <!-- Script untuk melihat password -->
-    <script src="assets/js/showPasswordLogin.js"></script>
+    <script src="assets/js/showPasswordRegister.js"></script>
 
     <!-- Sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

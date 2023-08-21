@@ -3,14 +3,14 @@
 <?php include "admin.php"; ?>
 
         <!-- Head Start -->
-        <div class="head text-center mt-4 mb-4">
-            <!-- <img src="assets/img/digitalent-mobile.png" width="100"> -->
-            <h1 class="text-white">Digitalent - Guest Book</h1>
+        <div class="head text-center mt-5 mb-5">
+            
+            <!-- <h1 class="text-white"><img src="assets/img/buku4.png" width="100">Guest Book</h1> -->
         </div>
         <!-- Head End -->
 
         <!-- Row Start -->
-        <div class="row mt-2">
+        <div class="row mt-5">
             <!-- col-lg-7 Start-->
             <div class="col-lg-7 mb-3">
                 <div class="card-background rounded bg-white shadow">
@@ -58,10 +58,10 @@
                                         Save
                                     </button>
                             </form>
-                            <hr>
+                            <!-- <hr>
                             <div class="text-center">
-                                <a class="small">Rendi Oktavian <br> Digitalent | <?= date('Y')?></a>
-                            </div>
+                                <a class="small">Rendi Oktavian <br><?= date('Y')?></a>
+                            </div> -->
 
                     </div>
                     <!-- Card Body End -->
@@ -143,7 +143,7 @@
         <!-- End Row -->
 
                 <!-- Tabel untuk menampilkan data tamu harian yang telah diinput oleh admin pada page index.php -->
-                    <div class="card shadow mb-4">
+                    <div class="card shadow mb-4 mt-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Visitor Data Today [<?= date('d-m-Y')?>]</h6>
                         </div>
@@ -214,4 +214,9 @@
                     </div>
 
                 <!-- Calling Footer Files -->
+                <!-- SweetAlert2 -->
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="assets/js/deleteVisitor.js"></script>
+                
                 <?php include "footer.php"; ?>
+

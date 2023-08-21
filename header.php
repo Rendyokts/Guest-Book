@@ -9,9 +9,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Digitalent Guest Book</title>
+    <title>Guest Book</title>
     
-    <link rel="icon" href="assets/img/digitalent-mobile.png">
+    <link rel="icon" href="assets/img/buku4.png" width="100">
 
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -38,7 +38,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center mt-3 mb-2 " href="index.php">
                 <div class="sidebar-brand-icon">
-                    <img src="assets/img/digitalent-mobile.png" width="50">
+                    <img src="assets/img/buku4.png" width="70">
                 </div>
                 <div class="sidebar-brand-text mx-1">Guest Book</div>
             </a>
@@ -79,11 +79,20 @@
             <hr class="sidebar-divider my-0">
 
                 <!-- Nav Item - Logout -->
-                <li class="nav-item admin">
-                    <a class="nav-link" name="admin" href="adminPage.php">
-                        <i class="fa fa-user"></i>
-                        <span>Admin</span></a>
-                </li>
+                <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Admin</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <!-- <h6 class="collapse-header">Custom Components:</h6> -->
+                        <a class="collapse-item" href="adminPage.php">Change Password</a>
+                        <a class="collapse-item" href="register.php">Add User</a>
+                    </div>
+                </div>
+            </li>
 
             <hr class="sidebar-divider my-0">
 

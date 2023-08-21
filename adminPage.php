@@ -26,11 +26,12 @@
                                                 id="new_password" placeholder="Password" required>
                                             <input type="password" name="confirm_password" class="form-control form-control-user mt-3"
                                                 id="confirm_password" placeholder="Confirm Password" required>
-                                            <input type="checkbox" id="show-password" class="my-3 ml-2"> Show Password
+                                            <input type="checkbox" id="show-password" class="my-3 ml-2">
+                                            <label for="show-password" class="fw-light">Show Password</label>
                                         </div>
                                         <!-- <div class="form-group">
                                         </div> -->
-                                        <input class="btn btn-primary btn-user btn-block" value="Save Password" type="submit" name="btnchange">
+                                        <input class="btn btn-primary btn-user btn-block" value="Save Password" type="submit" name="btnchange" id="changeButton">
                                     </form>
                                     <hr>
                                     <div class="text-center">
@@ -60,6 +61,10 @@
     
     <!-- Script untuk melihat password -->
     <script src="assets/js/showPasswordAdmin.js"></script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 
     <?php include 'footer.php'; ?>
