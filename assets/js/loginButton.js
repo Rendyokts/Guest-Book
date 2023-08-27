@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         title: 'Login Success',
                         text: 'Thanks!',
                     }).then(function() {
-                        document.location = 'index.php';
+                        document.location = 'dashboard.php';
                     });
                 } else {
                     Swal.fire({

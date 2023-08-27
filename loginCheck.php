@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -6,18 +7,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $users = json_decode(file_get_contents("users.json"), true);
 
-    $loggedIn = false;
+    $loggedInUser = null;
     foreach ($users as $user) {
         if ($user["username"] == $username && $user["password"] == $password) {
-            $loggedIn = true;
+            $loggedInUser = $user;
             break;
         }
     }
 
-    if ($loggedIn) {
-        echo "<script>document.location='index.php'</script>";
+    if ($loggedInUser) {
+        $_SESSION["user_id"] = $loggedInUser["username"]; // Simpan username dalam sesi
+        $_SESSION["login_time"] = time(); // Simpan waktu login dalam sesi
+        header("Location: dashboard.php");
+        exit();
     } else {
-        echo "<script>alert('Login Failed, Please try again!')
+        echo "<script>alert('Login Failed, Please try again!');
                     document.location='login.php'</script>";
     }
 }

@@ -1,6 +1,10 @@
 <!-- Calling Header File -->
+
+<?php include "sessionLogin.php"; ?>
 <?php include "header.php"; ?>
 <?php include "admin.php"; ?>
+<?php include "deleteVisitor.php"; ?>
+
 
         <!-- Head Start -->
         <div class="head text-center mt-5 mb-5">
@@ -142,7 +146,7 @@
         </div>
         <!-- End Row -->
 
-                <!-- Tabel untuk menampilkan data tamu harian yang telah diinput oleh admin pada page index.php -->
+                <!-- Tabel untuk menampilkan data tamu harian yang telah diinput oleh admin pada page dashboard.php -->
                     <div class="card shadow mb-4 mt-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Visitor Data Today [<?= date('d-m-Y')?>]</h6>

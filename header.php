@@ -36,7 +36,7 @@
         <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-3 mb-2 " href="index.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mt-3 mb-2 " href="dashboard.php">
                 <div class="sidebar-brand-icon">
                     <img src="assets/img/buku4.png" width="70">
                 </div>
@@ -50,7 +50,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link " href="index.php">
+                <a class="nav-link " href="dashboard.php">
                 <i class="fa fa-id-card" aria-hidden="true"></i>
                     <span class="">Dashboard</span></a>
             </li>
