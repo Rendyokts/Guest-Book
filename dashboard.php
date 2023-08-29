@@ -202,8 +202,13 @@
                                                 <td>
                                                     <!-- Button delete untuk menghapus data pada tabel -->
                                                     <button type="button" name="delete" class="btn btn-danger btn-sm" onclick="deleteVisitor(<?= $data['id'] ?>)">
-                                                        <i class="fa fa-trash"></i>
+                                                        <!-- <i class="fa fa-trash"></i> -->
                                                     Delete
+                                                    </button>
+                                                        
+                                                    <button type="button" name="edit" class="btn btn-warning btn-sm" onclick="editVisitor(<?= $data['id'] ?>)">
+                                                        <!-- <i class="fa fa-pencil-edit" aria-hidden="true"></i> -->
+                                                        Edit
                                                     </button>
                                                 </td>
                                             </tr>

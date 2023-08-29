@@ -97,11 +97,12 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Logout -->
-                <li class="nav-item logout">
-                    <a class="nav-link" name="logout" href="login.php">
-                        <i class="fa fa-sign-out-alt"></i>
-                        <span>Logout</span></a>
-                </li>
+            <li class="nav-item logout">
+                <a class="nav-link" name="logout" href="#" onclick="confirmLogout()">
+                    <i class="fa fa-sign-out-alt"></i>
+                    <span>Logout</span></a>
+            </li>
+
 
                 <hr class="sidebar-divider my-0">
 
@@ -118,3 +119,4 @@
 <!-- End of Sidebar -->
         <div class="container">
             <?php include "connection.php"; ?>
+            <script src="assets/js/logoutCheck.js"></script>

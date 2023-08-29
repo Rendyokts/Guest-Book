@@ -22,6 +22,7 @@
                                             <th>To Whom</th>
                                             <th>Address</th>
                                             <th>Phone Number</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -33,6 +34,7 @@
                                             <th>To Whom</th>
                                             <th>Address</th>
                                             <th>Phone Number</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -51,6 +53,20 @@
                                                 <td><?= $data['meet'] ?></td>
                                                 <td><?= $data['address'] ?></td>
                                                 <td><?= $data['phone'] ?></td>
+                                                <td>
+                                                    <!-- Button delete untuk menghapus data pada tabel -->
+                                                    <button type="button" name="delete" class="btn btn-danger btn-sm" onclick="deleteVisitor(<?= $data['id'] ?>)">
+                                                        <!-- <i class="fa fa-trash"></i> -->
+                                                    Delete
+                                                    </button>
+                                                
+                                                
+                                                    <!-- Button edit untuk mengubah data pada tabel -->
+                                                    <button type="button" name="edit" class="btn btn-warning btn-sm" onclick="editVisitor(<?= $data['id'] ?>)">
+                                                        <!-- <i class="fa fa-pencil-edit" aria-hidden="true"></i> -->
+                                                    Edit
+                                                    </button>
+                                                </td>
                                             </tr>
 
                                         <?php

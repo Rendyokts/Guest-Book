@@ -23,6 +23,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnRegister'])) {
         exit();
     }
 
+    // Periksa apakah password memiliki setidaknya 8 karakter dan berisi huruf dan angka
+    if (strlen($password) < 8 || !preg_match('/[A-Za-z]/', $password) || !preg_match('/\d/', $password)) {
+        echo "<script>alert('Password must be at least 8 characters and contain both letters and numbers!')
+                    document.location='register.php'</script>";
+        exit();
+    }
+
     // Tambahkan data pengguna baru ke dalam array $users
     $newUser = array(
         'username' => $username,
@@ -37,4 +44,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnRegister'])) {
                     document.location='login.php'</script>";
     exit();
 }
+
 ?>
