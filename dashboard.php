@@ -168,7 +168,7 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
+                                    <!-- <tfoot>
                                         <tr>
                                             <th>No.</th>
                                             <th>Date</th>
@@ -179,7 +179,7 @@
                                             <th>Phone Number</th>
                                             <th>Action</th>
                                         </tr>
-                                    </tfoot>
+                                    </tfoot> -->
                                     <tbody>
                                         <?php
                                             //Membuat variable tanggal untuk ditampilkan pada tabel data pengunjung

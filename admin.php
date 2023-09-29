@@ -10,7 +10,10 @@
         $phone = htmlspecialchars($_POST['phone'], ENT_QUOTES); //Dibuat untuk menghindari user meng-inject 'Script' agar tidak tersimpan ke DB
         
         //Mempersiapkan query save data
-        $save = mysqli_query($connection, "INSERT INTO tbtamu VALUES ('', '$date', '$name', '$address', '$purpose', '$meet','$phone')");
+        // $save = mysqli_query($connection, "INSERT INTO tbtamu VALUES ('', '$date', '$name', '$address', '$purpose', '$meet','$phone')");
+        $query = "INSERT INTO tbtamu (date, name, address, purpose, meet, phone) VALUES ('$date', '$name', '$address', '$purpose', '$meet', '$phone')";
+
+        $save = mysqli_query($connection, $query);
 
         if($save){ //Mengecek jika save data sukses
             echo "<script>alert('Save Data Success, Thanks!')
